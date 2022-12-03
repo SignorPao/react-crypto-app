@@ -7,7 +7,7 @@ import searchIcon from "../assets/search-icon.svg";
 
 const SearchInput = ({ handleSearch }) => {
   const [searchText, setSearchText] = useState("");
-  let { searchData, setCoinSearch, setSearchdata } = useContext(CryptoContext);
+  let { searchData, setCoinSearch, setSearchData } = useContext(CryptoContext);
 
   let handleInput = (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const SearchInput = ({ handleSearch }) => {
   const selectCoin = (coin) => {
     setCoinSearch(coin);
     setSearchText("");
-    setSearchdata();
+    setSearchData();
   };
 
   return (
