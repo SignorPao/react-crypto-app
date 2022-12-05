@@ -29,7 +29,6 @@ function CustomTooltip({ payload, label, active, currency = "usd" }) {
       </div>
     );
   }
-
   return null;
 }
 
@@ -59,6 +58,7 @@ const ChartComponent = ({ data, currency, type }) => {
   );
 };
 
+// chart component
 const Chart = ({ id }) => {
   const [chartData, setChartData] = useState();
 

@@ -54,13 +54,13 @@ const CryptoDetails = () => {
       onClick={close}
     >
       <div
-        className="w-[65%] h-[75%] bg-gray-300/75 rounded-lg text-white relative"
+        className="w-[80%] lg:w-[65%] h-auto lg:h-[75%] bg-gray-300/75 rounded-lg text-white relative"
         onClick={(e) => e.stopPropagation()}
       >
         {data ? (
-          <div className="flex justify-between items-center h-full w-full p-4">
+          <div className="flex flex-col lg:flex-row justify-between items-center h-full w-full p-4">
             {/* left block(text) */}
-            <div className="flex flex-col w-[45%] h-full pr-2">
+            <div className="flex flex-col lg:w-[45%] h-full pr-2">
               {/* name */}
               <div className="flex w-full items-center">
                 <img
@@ -333,7 +333,7 @@ const CryptoDetails = () => {
             </div>
 
             {/* right block(graph) */}
-            <div className="flex flex-col w-[55%] h-full pl-3">
+            <div className="hidden lg:flex flex-col w-[55%] h-full pl-3">
               {/* chart component */}
               <Chart id={data.id} />
 
@@ -363,7 +363,7 @@ const CryptoDetails = () => {
             </div>
 
             {/* socials links */}
-            <div className="absolute bottom-8 right-8 flex items-center">
+            <div className="hidden absolute bottom-8 right-8 lg:flex items-center">
               {data.links.repos_url.github[0] && (
                 <a
                   className="text-lg px-1"
@@ -492,7 +492,7 @@ const CryptoDetails = () => {
              border-b-gray-200 animate-spin"
               role="status"
             />
-            <span className="ml-2">please wait...</span>
+            <span className="ml-2">Please wait...</span>
           </div>
         )}
       </div>

@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import { CryptoContext } from "../context/CryptoContext";
+import { CryptoContext } from "./../context/CryptoContext";
 
 // import icons
 import paginationArrow from "../assets/pagination-arrow.svg";
@@ -20,14 +20,14 @@ const PerPage = () => {
 
   return (
     <form
-      className="relative flex items-center font-nunito mr-12"
+      className="relative flex items-center font-nunito lg:mr-12"
       onSubmit={handleSubmit}
     >
       <label
         htmlFor="perpage"
         className="relative flex justify-center items-center mr-2 font-bold capitalize"
       >
-        perpage:{" "}
+        Per page:{" "}
       </label>
       <input
         type="number"
@@ -85,7 +85,7 @@ const Pagination = () => {
 
   if (cryptoData && cryptoData.length >= perPage) {
     return (
-      <div className="flex items-center">
+      <div className="flex flex-col lg:flex-row gap-y-4 lg:gap-y-0 items-center">
         <PerPage />
         <ul className="flex items-center justify-end text-sm">
           <li className="flex items-center">
